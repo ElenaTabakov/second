@@ -16,8 +16,13 @@ class UserController extends Controller
              return "Wrong ID type";
          }
     }
+    
     public function showForm () {
          return view ('form');
     }
+    
+    public function showThanks () {
+           return view ('thank-you');
+        }
 }
 

@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::get('/id{id?}', 'UserController@showID');
 Route::get('/form', 'UserController@showForm');
+Route::post('/form', 'UserController@showThanks');
