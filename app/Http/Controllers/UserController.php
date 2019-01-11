@@ -7,13 +7,11 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function showID ($id=null) {
-         if (ctype_digit($id) && $id !== NULL){
-             return $id;  
+         if ($id == NULL){
+             return "Empty ID";  
 
-        } elseif  ($id == null) {
-             return "Empty ID"; 
         } else {
-             return "Wrong ID type";
+             return $id;
          }
     }
     

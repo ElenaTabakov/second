@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/id{id?}', 'UserController@showID');
+Route::get('/id{id?}', 'UserController@showID')->where ('id', '[0-9]+');
 Route::get('/form', 'UserController@showForm');
 Route::post('/form', 'UserController@showThanks');
